@@ -6,9 +6,7 @@
 def give_fibonnaci(num1 = 1, num2 = 2, max_num=100):
     while num1 < max_num:
         yield num1
-        temp = num1
-        num1 = num2
-        num2 = temp + num2
+        num1, num2 = num2, num1 + num2
         
 fib_sequence = give_fibonnaci(1,2,4000000)
 
